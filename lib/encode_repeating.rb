@@ -7,7 +7,7 @@
 def encode_repeating(my_string)
   return my_string if !my_string || my_string.length < 2
   current, check_next = 0, 1
-  until current >= my_string.length - 1
+  until current == my_string.length
     check_next += 1 while my_string[current] == my_string[check_next]
     repeats = check_next - current
     if repeats > 2
